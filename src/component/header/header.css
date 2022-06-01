@@ -1,0 +1,132 @@
+header{
+    height: 100vh;
+    padding-top: 2rem;
+    
+
+}
+
+
+
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.header__container h5{
+    color: var(--color-light);
+    margin-bottom: 0;
+}
+
+/*********CTA**************/
+
+.cta{
+    margin-top: 1rem;
+    display: flex;
+    gap:2rem;
+    justify-content: center;
+}
+
+/*********SOCIALS**************/
+
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header__socials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/**************ME*****************/
+
+.me{
+     width: 22rem;
+     height: 25rem;
+     position: relative;
+     left: calc(50% - 11rem);
+     margin-top: 2rem;
+     border-radius: 12rem 12rem 0 0;
+     overflow: hidden;
+     padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+.me img{
+    position: absolute;
+    top: -20px;
+    left:0;
+}
+.arrow{
+    position: absolute;
+    bottom: 10rem;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.arrow span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll 2s infinite;
+}
+
+.arrow  span:nth-child(2){
+    animation-delay: -.3s;
+}
+
+.arrow span:nth-child(3){
+    animation-delay: -.6s;
+}
+
+@keyframes scroll{
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-40px, -40px);
+    }
+
+    50%{
+        opacity: 1;
+        transform: rotate(45deg) translate(-40px, -40px);
+    }
+
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(40px, 40px);
+    }
+}
+
+
+
+
+@media screen and (max-width: 1024px){
+      header{
+          height: 68vh;
+      }
+}
+
+
+@media screen and (max-width: 600px){
+      header{
+          height: 100vh;
+      }
+      
+
+      .header__socials,
+      .scroll__down {
+          display: none;
+      }
+}
+
